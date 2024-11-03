@@ -1,0 +1,28 @@
+general {
+	colors   = false
+	interval = 10
+}
+
+tztime local {
+        format = "%H:%M:%S %d.%m.%Y"
+}
+
+disk "/" {
+	format = "/ %avail"
+}
+
+wireless _first_ {
+	format_up   = "%essid %quality"
+	format_down = "Wireless -"
+}
+
+battery _first_ {
+	format      = "Battery %percentage"
+	format_down = "Battery -"
+	integer_battery_capacity = true
+}
+
+order += "battery _first_"
+order += "wireless _first_"
+order += "disk /"
+order += "tztime local"

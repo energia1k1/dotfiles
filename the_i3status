@@ -1,0 +1,19 @@
+#!/bin/bash
+
+KEYBOARD_LAYOUT="us"
+switch_keyboard_layout() {
+    if [[ "${KEYBOARD_LAYOUT}" = "us" ]]
+        then KEYBOARD_LAYOUT="cz"
+        else KEYBOARD_LAYOUT="us"
+    fi
+    setxkbmap "${KEYBOARD_LAYOUT}"
+}
+trap "switch_keyboard_layout; killall -USR1 i3status" USR1
+
+while read -r status_line; do
+    charged=$(echo "${status_line}" | sed -n 's/.*Battery \([0-9]*\)/\1/p')
+    if [[ -n "${charged}" && "${charged}" -le 10 ]]
+        then notify-send -r 1 -u critical "Low battery level (${charged}%)."
+    fi
+    echo "Keyboard ${KEYBOARD_LAYOUT^^} | ${status_line}"
+done < <(i3status "$@")

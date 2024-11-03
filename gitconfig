@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = master
+[user]
+	name  = lesakral
+	email = e6911586@gmail.com
+[alias]
+	ci = commit
+	co = checkout
+	st = status
