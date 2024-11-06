@@ -2,6 +2,7 @@
 
 ln -sf .dotfiles/bashrc         ~/.bashrc        
 ln -sf .dotfiles/bash_profile   ~/.bash_profile
+ln -sf .dotfiles/dunst          ~/.dunst
 ln -sf .dotfiles/gitconfig      ~/.gitconfig
 ln -sf .dotfiles/emacs          ~/.emacs         
 ln -sf .dotfiles/i3             ~/.i3      
