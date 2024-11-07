@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ -z "$1" || (! "$1" =~ ^([0-9]*)?(\.[0-9]+)?$) ]]; then
+   echo "usage: $0 fraction"
+   exit 1
+fi
+
+level=$(cat /sys/class/backlight/intel_backlight/max_brightness)
+if [[ "$(echo "$1" | cut -d'.' -f1)" -eq 0 ]]; then
+    fract=$(echo "$1" | cut -d'.' -f2 | head -c1)
+    level=$(( ${level} * ${fract} * 10 / 100 ))
+fi
+echo "${level}" | sudo tee /sys/class/backlight/intel_backlight/brightness > /dev/null

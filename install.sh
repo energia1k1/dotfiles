@@ -11,4 +11,5 @@ ln -sf .dotfiles/xinitrc        ~/.xinitrc
 ln -sf .dotfiles/Xresources     ~/.Xresources
 
 mkdir -p ~/bin
-ln -sf ../.dotfiles/the_i3status ~/bin/the_i3status
+ln -sf ../.dotfiles/the_i3status  ~/bin/the_i3status
+ln -sf ../.dotfiles/the_backlight ~/bin/the_backlight
