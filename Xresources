@@ -1,6 +1,6 @@
 xterm*loginshell: true
 xterm*faceName: monospace
-xterm*faceSize: 12
+xterm*faceSize: 14
 xterm*backarrowKey: false
 xterm*ttyModes: erase ^?
 xterm*termName: xterm-256color
