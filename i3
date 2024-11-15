@@ -6,11 +6,11 @@ set $ws4 "4"
 
 floating_modifier $mod
 
-font pango:monospace 14
+font pango:CascadiaMono 14
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Control+L exec i3lock -c 000000
-bindsym $mod+d  exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -b -fn 'monospace:size=18''
+bindsym $mod+d  exec --no-startup-id i3-dmenu-desktop --dmenu 'dmenu -b -fn 'CascadiaMono:size=16''
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m ' Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+Shift+q kill

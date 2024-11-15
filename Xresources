@@ -1,5 +1,5 @@
 xterm*loginshell: true
-xterm*faceName: monospace
+xterm*faceName: CascadiaMono
 xterm*faceSize: 14
 xterm*backarrowKey: false
 xterm*ttyModes: erase ^?
